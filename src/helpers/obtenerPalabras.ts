@@ -13,5 +13,5 @@ let palabras: string[] = [
 
 export const obtenerPalabras=()=>{
     const randomIndex=Math.floor(Math.random()*palabras.length) 
-    return 'Hola';
+    return palabras[randomIndex];
 }
