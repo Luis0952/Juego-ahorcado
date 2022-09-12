@@ -43,6 +43,10 @@ function App() {
         return;
       }
 
+      const colorDivLetra=()=>{
+        color:'violet'
+        return;
+      }
       const ocultarPalabraArray=ocultarPalabra.split(" ")
 
     for(let i=0; i<palabras.length; i++){
@@ -64,7 +68,11 @@ function App() {
   };
 
   return (
+   
   <div className="text-center">
+      <div>
+        <h1 className='text-6xl p-5 font-bold'>Juego del <span className='text-7xl underline font-bold text-blue-800'>Ahorcado </span> 🤪</h1>
+      </div>
       {/* imagenes */}
       <div className='mx-auto flex flex-col justify-center items-center'>
       <HangImage imagenNumero={intentos}/>
@@ -77,7 +85,7 @@ function App() {
       </h3>
 
       <h3 
-      className="font-bold text-2xl my-4 text-blue-600">
+      className="font-bold text-4xl my-4 text-blue-600">
       Intento: {intentos} </h3>
 
      {/* Mensaje si perdió */}   
@@ -93,7 +101,7 @@ function App() {
         { gano ? (
           <h3 
         className="font-bold text-2xl my-4 text-green-600">
-        🥳 Felicdades, usted Ganó! </h3>) : (""
+        🥳 Felicidades, usted Ganó! </h3>) : (""
         
         )}
 
@@ -102,7 +110,7 @@ function App() {
        <button 
       onClick={()=>validarPalabras(letra)}//En el onClick tiene que ir como función
       key={letra}
-      className="bg-white p-4 rounded-full shadow-md m-2" 
+      className=" bg-white p-8 font-bold rounded-full shadow-md m-2 hover:bg-violet-600 hover:text-white  active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300" 
       >
         {letra}
       </button>  
